@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var canvasView: CanvasView!
     
+    @IBOutlet weak var signatureImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
     @IBAction func clearnButtonPressed(_ sender: UIButton) {
         
         canvasView.clearCanvas()
+    }
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        signatureImageView.image = canvasView.getSignature()
+        
     }
     
 }

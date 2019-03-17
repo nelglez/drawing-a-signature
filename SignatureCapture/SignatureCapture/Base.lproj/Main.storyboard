@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="15l-xd-TjS">
-                                <rect key="frame" x="10" y="51" width="355" height="138"/>
+                                <rect key="frame" x="10" y="51" width="355" height="176"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalCompressionResistancePriority="746" translatesAutoresizingMaskIntoConstraints="NO" id="zTe-Hw-7he" customClass="CanvasView" customModule="SignatureCapture" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="100"/>
@@ -35,8 +35,19 @@
                                             <action selector="clearnButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYF-DE-vgj"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vem-MN-MVK" userLabel="Save">
+                                        <rect key="frame" x="0.0" y="146" width="355" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TnZ-m2-hj3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAu-2x-t1y">
+                                <rect key="frame" x="16" y="327" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -48,6 +59,7 @@
                     </view>
                     <connections>
                         <outlet property="canvasView" destination="zTe-Hw-7he" id="Yt5-EQ-XJa"/>
+                        <outlet property="signatureImageView" destination="aAu-2x-t1y" id="BnR-gj-MVg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
